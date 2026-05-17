@@ -1,0 +1,391 @@
+
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: 'Montserrat', sans-serif;
+      }
+    
+    
+
+      .slider{
+            width:98%;
+            height:600px;
+            margin:0px 15px;
+            padding: 10px;
+            position:relative;
+            overflow:hidden;
+            border-radius:20px;
+        }
+        
+        .slide{
+            position:absolute;
+            width:100%;
+            height:100%;
+            opacity:0;
+            transition:opacity 1s ease;
+        }
+        
+        .slide img{
+            width:100%;
+            height:100%;
+            object-fit:contain;
+            object-position: center;
+            position:absolute;
+            top:16vh;
+            transform:scale(1);
+            transition:transform 5s ease;
+        }
+        
+        .slide.active{
+            opacity:1;
+        }
+        
+        .slide.active img{
+            transform:scale(1.1);
+        }
+        
+    .btn{
+        position:absolute;
+        top:60%;
+        transform:translateY(-50%);
+        padding:15px 22px;
+        border:none;
+        background:transparent;
+        border: 2px solid white;
+        border-radius: 50px;
+        color:white;
+        cursor:pointer;
+        font-size:20px;
+        display:none;
+    }
+
+    .btn:hover{
+        background-color: antiquewhite;
+    }
+
+    .slider:hover .btn{
+        display:block;
+    }
+
+    #prev{
+        left:20px;
+    }
+
+    #next{
+        right:20px;
+    }
+    
+    .navbar {
+          width: 100%;
+          background: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 102px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          top: 0;
+          left: 0;
+          position: fixed;
+          z-index: 2;
+      }
+
+      .logo {
+          display: flex;
+          align-items: center;
+      }
+
+      .logo img {
+          width: 100px;
+          margin-right: 5px;
+      }
+
+      .logotext {
+          color: rgb(145, 136, 136);
+      }
+
+      .lo{
+          color: rgb(207, 40, 40);
+          font-size: 33px;
+      }
+
+      .logotext p {
+          font-size: 18px;
+          letter-spacing: 2px;
+          font-weight: bold;
+      }
+
+      .nav-links {
+          list-style: none;
+          display: flex;
+          gap: 35px;
+          margin-right: 20px;
+      }
+
+      .nav-links li a {
+          text-decoration: none;
+          color: #666;
+          font-size: 13px;
+          font-weight: bold;
+          transition: 0.3s;
+      }
+
+      .nav-links li a:hover {
+          color: red;
+          cursor: pointer;
+      }
+      .nav-link:hover {
+          color: red;
+          cursor: pointer;
+      }
+
+      .foot {
+          background-color: rgb(100, 94, 94);
+          padding: 90px 100px;
+      }
+
+      .foot1 p{
+          color:aliceblue;
+          width:480px;
+          font-size: 14px;
+          padding-top: 20px;
+          line-height: 22px;
+      }
+
+      .foot2 ul,li,a{
+          margin:10px 0px 10px;
+          color:aliceblue;
+          text-decoration: none;
+          list-style: none;
+          
+      }
+      .foot2 li::before{
+          content: "❯";
+      }
+      .features li::before{
+        content: "› ";
+        color: #e85d26;
+        font-size: 25px;
+        font-weight: bolder;
+        line-height: 0.7;
+      }
+     
+  
+      .contact-item .label {
+        color: #e85d26;
+        font-weight: 600;
+        min-width: 52px;
+        font-family: 'Rajdhani', sans-serif;
+        font-size: 15px;
+        letter-spacing: .5px;
+      }
+  
+      .contact-item a {
+        color: aliceblue;
+        text-decoration: none;
+        transition: color .2s;
+      }
+      .contact-item a:hover { color: #fff; }
+  
+
+      .links-col h4, .products-col h4 {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 15px;
+      }
+  
+      
+  
+      .nav-link {
+        display: flex;
+        gap: 8px;
+        font-size: 14px;
+        color: aliceblue;
+        text-decoration: none;
+        transition: color .2s, gap .2s;
+      }
+  
+      .nav-link::before {
+        content: '›';
+        color: #e85d26;
+        font-size: 25px;
+        line-height: 0.7;
+      }
+  
+
+  
+      /* ── PRODUCTS COL ── */
+      .products-col .nav-link { font-size: 13.5px; }
+  
+      /* ── SOCIAL ── */
+      .social-section {
+        margin-top: 28px;
+      }
+  
+      .social-section h5{
+        font-size:16px;
+        font-weight: 700;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        color:aliceblue;
+        margin-bottom: 14px;
+      }
+  
+      .social-icons {
+        display: flex;
+        gap: 10px;
+      }
+  
+      .social-icon {
+        width: 45px; height: 45px;
+        border-radius: 50%;
+        border: 1.5px solid aliceblue;
+        display: flex; align-items: center; justify-content: center;
+        color: aliceblue;
+        text-decoration: none;
+        font-size: 40px;
+        transition: background .2s, border-color .2s, color .2s, transform .2s;
+      }
+  
+      .social-icon:hover {
+        background: #e85d26;
+        color: #fff;
+      }
+  
+      /* ── BOTTOM BAR ── */
+      .footer-bottom {
+        display: flex;
+        padding: 30px 100px 30px 100px;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        color: #fff;
+        background-color: rgb(48, 44, 44);
+      }
+  
+      .footer-bottom a { color: #e85d26; text-decoration: none; }
+
+  
+      .pr {
+          flex-basis: 20%;
+          width: 250px;
+          height: auto
+      }
+
+      .features li {
+          color: black;
+      }
+
+      #gallery img {
+          transition: transform 0.5s ease-in-out;
+
+      }
+
+      #gallery img:hover {
+          transform: scale(1.2);
+      }
+
+      .overlay {
+          background-color: rgb(5, 5, 19);
+          width: 100%;
+          height: 100vh;
+          position: fixed;
+          top: 0px;
+          left: 0px;
+          opacity: 0.9;
+          z-index: 1;
+          display: none;
+      }
+
+      .contact2 {
+          position: fixed;
+          background-color: rgb(245, 238, 225);
+          color: black;
+          z-index: 3;
+          width: 400px;
+          height: 416px;
+          padding: 40px;
+          display: block;
+          top: 20vh;
+          left: 52vw;
+      }
+      #success-msg{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        text-align: center;
+        display: none;
+        z-index: 9999;
+    }
+    
+    #success-msg button{
+        padding: 10px 20px;
+        border: none;
+        background: green;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+      .pop {
+          position: fixed;
+          background-color: whitesmoke;
+          color: black;
+          z-index: 2;
+          width: 30%;
+          top: 20vh;
+          left: 22vw;
+          border-radius: 10px 0px 0px 10px;
+          padding: 40px;
+          display: none;
+      }
+
+      .pop input {
+          background-color: transparent;
+          width: 90%;
+          padding: 8px;
+          font-size: 20px;
+          margin: 10px;
+          border: none;
+          border-bottom: solid black 2px;
+      }
+
+      .pop textarea {
+          background-color: transparent;
+          width: 90%;
+          padding: 10px;
+          font-size: 20px;
+          margin: 10px;
+          border: solid black 2px;
+      }
+
+      .pop input::placeholder,
+      .pop textarea::placeholder {
+          color: black
+      }
+
+      .pop input:focus,
+      .pop textarea:focus {
+          outline: none;
+      }
+
+      .pop button {
+          height: 30px;
+          width: 60px;
+          margin-left: 10px;
+          background: transparent;
+          color: aliceblue;
+      }
+
+      .pop h2 {
+          margin-left: 10px;
+      }
