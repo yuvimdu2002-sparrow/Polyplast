@@ -20,7 +20,6 @@ adpop.addEventListener("click", function () {
     overlay.style.display = "block"
     pop.style.display = "block"
     cont.style.display = "block"
-    nav.style.zIndex = "0"
     window.scrollTo({
         top:0,
         behaviour:"smooth"
@@ -32,6 +31,13 @@ remo.addEventListener("click", function () {
     pop.style.display = "none"
     cont.style.display = "none"
 })
+var liv =document.querySelector(".linenv")
+var link =document.querySelector(".nav1")
+liv.addEventListener("click",function () {
+    link.style.display="block";
+
+})
+
 
 window.addEventListener("scroll", function () {
 
@@ -40,21 +46,20 @@ window.addEventListener("scroll", function () {
     let logimg = document.getElementById("logimg")
     let logo = document.querySelector(".lo")
     let l1 = document.querySelector(".lop")
-
+    
     if (window.scrollY > 50) {
         navbar.style.height = "55px"
         logotext.style.display = "flex"
         logimg.style.width = "35px"
         logo.style.fontSize = "20px"
         l1.style.padding = "2px 5px"
-
+        liv.style.margin = "0 50px"
     }
     else {
         navbar.style.height = "auto"
-        logimg.style.width = "100px"
         logotext.style.display = "block"
-        logo.style.fontSize = "33px"
-        l1.style.padding = "0px"
+        logimg.style.width = "70px"
+        liv.style.margin = "0 110px"
     }
 })
 
