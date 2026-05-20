@@ -8,6 +8,7 @@ var form = document.getElementById("frm")
 var close = document.getElementById("close")
 var msg=document.getElementById("success-msg")
 var nav = document.querySelector(".navbar")
+var poup = document.getElementById("upop")
 
 
 function closeMsg(){
@@ -34,8 +35,7 @@ remo.addEventListener("click", function () {
 var liv =document.querySelector(".linenv")
 var link =document.querySelector(".nav1")
 liv.addEventListener("click",function () {
-    link.style.display="block";
-
+    link.classList.toggle("show");
 })
 
 
@@ -61,6 +61,13 @@ window.addEventListener("scroll", function () {
         logimg.style.width = "70px"
         liv.style.margin = "0 110px"
     }
+})
+
+poup.addEventListener("click", function () {
+
+    overlay.style.display = "block"
+    pop.style.display = "block"
+    cont.style.display = "block"
 })
 
 popup.addEventListener("click", function () {
